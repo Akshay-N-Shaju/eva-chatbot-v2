@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="1.0">
+
+<meta name="author" content="conversation"/>
+
+<!-- includes -->
+<include file="./lib/aiml/personality.aiml"/>
+<include file="./lib/aiml/bot_profile.aiml"/>
+<include file="./lib/aiml/reductions1.aiml"/>
+<include file="./lib/aiml/reductions_update.aiml"/>
+<include file="./lib/aiml/reductions2.aiml"/>
+<include file="./lib/aiml/knowledge.aiml"/>
+<include file="./lib/aiml/profanity.aiml"/>
+<include file="./lib/aiml/animal.aiml"/>
+<include file="./lib/aiml/client_profile.aiml"/>
+<include file="./lib/aiml/config.aiml"/>
+<include file="./lib/aiml/date.aiml"/>
+<include file="./lib/aiml/insults.aiml"/>
+<include file="./lib/aiml/inquiry.aiml"/>
+<include file="./lib/aiml/default.aiml"/>
+<include file="./lib/aiml/dialog.aiml"/>
+<include file="./lib/aiml/inappropriate.aiml"/>
+<include file="./lib/aiml/roman.aiml"/>
+<include file="./lib/aiml/that.aiml"/>
+<include file="./lib/aiml/train.aiml"/>
+<include file="./lib/aiml/udc.aiml"/>
+<include file="./lib/aiml/utilities.aiml"/>
+<include file="./lib/aiml/z_update.aiml"/>
+
+
+<default>
+<template>
+<random>
+		<li>It's a bit confusing</li>
+</random>
+</template>
+</default>
+
+  <!-- set, get, star -->
+        <category>
+            <pattern>my name is *</pattern>
+            <template>
+                ok , your name is
+                <set type="user" name="name">
+                    <star index="1"/>
+                </set>
+            </template>
+        </category>
+    <category>
+            <pattern>Talk to Hello Akshay</pattern>
+            <template> Hai Welcome to akshay's bot</template>
+        </category>
+
+        <category>
+            <pattern>what is my name</pattern>
+            <template>
+                oh , your name is
+                <get type="user" name="name"/>
+                , i remembered it last time ...
+            </template>
+        </category>
+		
+		        <category>
+            <pattern>botInfo</pattern>
+            <template>
+                name :
+                <bot name="name"/>
+                , age
+                <bot name="age"/>
+                , website :
+                <bot name="website"/>
+                , version :
+                <bot name="version"/>
+                ...
+            </template>
+        </category>
+<!--
+<category>
+    <pattern>hello</pattern>
+    <template>
+    	<random>
+		<li>hello ...</li>
+		<li>Hai ...</li>
+		<li>Howdy ...</li>
+		<li>Hola ...</li>
+		</random>
+    </template>
+</category>
+
+
+<category>
+    <pattern>DEFAULT</pattern>
+    <template>
+        <random>
+        <li>I didn't get that.</li>
+        </random>
+    </template>
+</category>
+-->
+	<category>
+	<pattern>name _ hod</pattern>
+	<template>krishnadas</template>
+	</category>
+	<category>
+	<pattern>_ number * teachers _ computer _</pattern>
+	<template>here we have 25 faculties </template>
+	</category>
+	
+	<category>
+	<pattern>_ intake students _</pattern>
+	<template>120 students are offered to have this course </template>
+	</category>
+	<category>
+	<pattern>name _ principal</pattern>
+	<template>nixon</template>
+	</category>
+		<category>
+	<pattern>_ principal</pattern>
+	<template>nixon</template>
+	</category>
+	
+	<category>
+	<pattern>_ executive director</pattern>
+	<template>lasar kuttikkaadan</template>
+	</category>
+	<category>
+	<pattern>how many teachers have published their papers in international journels </pattern>
+	<template> eleven teachers have published their papers in international journels like ijcset,ijcsit etc</template>
+	</category>
+	<category>
+	<pattern>placement *</pattern>
+	<template>ibs,kpit,smec,qburst have recruited students from the cs department</template>
+	</category>
+	
+	
+	<category>
+           <pattern>_ Priya _ phone _</pattern>
+           <template>
+     Priya's phone number is 0480-2726630-291
+           </template>
+       </category>
+       <category>
+           <pattern>_ Priya _ email _</pattern>
+           <template>
+     Priya's email id is priyakv@sahrdaya.ac.in
+           </template>
+       </category>
+	   
+	   <category>
+           <pattern>_ Soumya _ phone _</pattern>
+           <template>
+     soumya's phone number is 0480-2726630-291
+           </template>
+       </category>
+       <category>
+           <pattern>_ soumya _ email _</pattern>
+           <template>
+     soumya's email id is soumyavarma@sahrdaya.ac.in
+           </template>
+       </category>
+
+	    <category>
+           <pattern>_ livya _ phone _</pattern>
+           <template>
+     livya's phone number is 0480-2726630-291
+           </template>
+       </category>
+       <category>
+           <pattern>_ livya _ email _</pattern>
+           <template>
+     livya's email id is livyageorge@sahrdaya.ac.in
+           </template>
+       </category>
+	   
+	   <category>
+           <pattern>_ anila _ phone _</pattern>
+           <template>
+     anila's phone number is 0480-2726630-291
+           </template>
+       </category>
+       <category>
+           <pattern>_ anila _ email _</pattern>
+           <template>
+     anila's email id is anilathomas@sahrdaya.ac.in
+           </template>
+       </category>
+	   
+	   <category>
+           <pattern>_ divya _ phone _</pattern>
+           <template>
+     divya's phone number is 0480-2726630-291
+           </template>
+       </category>
+       <category>
+           <pattern>_ divya _ email _</pattern>
+           <template>
+     divya's email id is divyar@sahrdaya.ac.in
+           </template>
+       </category>
+	   
+	    <category>
+           <pattern>_ vision _ sahrdaya_</pattern>
+           <template>
+     To train the youth to be the leaders of tomorrow with apt skills,
+	 deep rooted sense of social responsibility,
+	 strong ethical values and with a global outlook to face 
+	 the challenges of changing world
+           </template>
+       </category>
+	   <category>
+           <pattern>_mission _ sahrdaya_</pattern>
+           <template>
+    With a high calibre faculty and an excellent infrastructure,
+	we promote academic excellence, absolute discipline and sound practical exposure
+           </template>
+       </category>
+	   
+	   <category>
+           <pattern>_ programms offered _</pattern>
+           <template>
+    computer science and engineering
+	electrical and electronics engineering
+	biomedical engineering
+	biotechnology engineering
+	electrical and electronics engineering
+	civil engineering
+	electronics and communication engineering
+           </template>
+       </category>
+	    
+		<category>
+           <pattern>_ association _ computer science</pattern>
+           <template>aces </template>
+       </category>
+	   <category>
+           <pattern>_ association _ computer science</pattern>
+           <template>aces </template>
+       </category>
+	   <category>
+           <pattern>_ association _ computer science</pattern>
+           <template>aces </template>
+       </category>
+</aiml>
+
+
+
+
+    
